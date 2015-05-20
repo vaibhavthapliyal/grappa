@@ -31,6 +31,9 @@ macro(grappa_search_for_boost)
   # if boost was not found in third-party, restore any user-specified pointers and search there and in standard paths
   #
   if(NOT Boost_FOUND)
+
+    # is this getting kept between boost search invocations?
+    unset(_boost_LIBRARY_SEARCH_DIRS)
     
     # restore any user-specified pointers
     if(Boost_NO_SYSTEM_PATHS_BACKUP)
