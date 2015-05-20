@@ -33,6 +33,7 @@ macro(grappa_search_for_boost)
   if(NOT Boost_FOUND)
 
     # is this getting kept between boost search invocations?
+    unset(_boost_INCLUDE_SEARCH_DIRS)
     unset(_boost_LIBRARY_SEARCH_DIRS)
     
     # restore any user-specified pointers
